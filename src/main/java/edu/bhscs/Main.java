@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("Program Start");
 		System.out.println("Shadowcast (3T)");
 		System.out.println("Rush - If this card resolves the turn it was flipped,");
-		System.out.println("You may add a card with cost 3T or less from your hand to your chain. (Cards added after time calculation don't cost any time.)");
+		System.out.println("You may add a card with cost 3[T] or less from your hand to your chain. (Cards added after time calculation don't cost any time.)");
 		System.out.println("Program End");
 	}
 }
