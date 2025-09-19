@@ -1,6 +1,11 @@
 package edu.bhscs;
 
-public enum MapTile {
-  Land,
-  Water
+public class MapTile {
+    public String readableName;
+    public Boolean traversable;
+
+    public MapTile(String readableName, Boolean traversable) {
+        this.readableName = readableName;
+        this.traversable = traversable;
+    }
 }
