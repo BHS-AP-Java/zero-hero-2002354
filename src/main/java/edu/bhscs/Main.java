@@ -1,49 +1,51 @@
 // Balakesav Gurugubelli
 // P2
 // Zero Hero
-// 9/12
+// 9/19
 
-/*
- * DESCRIPTION: Whatever Mr. Reiber says
- * INPUT: No input
- * OUTPUT: Print stuff in terminal
- * EDGE CASE: They are all edge cases at the moment
+/*.
+ * DESCRIPTION: CAKE
+ * INPUT: User Input
+ * OUTPUT: Print game
+ * EDGE CASE: I don't know yet
  */
 
 package edu.bhscs;
 
+import java.util.Scanner;
+
 public class Main {
-  // public static final char A = 'a';
-  public static final String CSV_DELIMITER = ",";
-
   public static void main(String[] args) {
-    // System.out.println("Program Start");
-    // System.out.println("Shadowcast - Dark (3T)");
-    // System.out.println("Rush - If this card resolves the turn it was flipped,");
-    // System.out.println(
-    //     "You may add a card with cost 3[T] or less from your hand to your chain. (Cards added
-    // after time calculation don't cost any time.)");
-    // System.out.println("Program End");
+    int cakeHP = 10;
+    int attackStrength = 2;
 
-    // int someNumber = 67;
+    Scanner scanner = new Scanner(System.in);
 
-    // System.out.println("67!" + A + someNumber);
-    // System.out.println(A + "?" + A + someNumber);
-    // System.out.println(A + A + someNumber);
-    // System.out.println();
-    // System.out.println("this is neat");
-    // System.out.println();
-    // System.out.println("Ok im done.");
+    Boolean continueGame = true;
 
-    // System.out.println(whoIsBetter(true));
+    while(continueGame){
 
-    Card myNewCard =
-        new Card("Time Blizzard", 3, CardType.Enchantment, "All action cards cost 1[T] more.");
-    myNewCard.PrintCard();
+      System.out.print("Choose your move: ");
+
+      String move = scanner.nextLine();
+
+      if(move.equals("a") || move.equals("attack")){
+        System.out.println("Attacking the cake!");
+        cakeHP -= attackStrength;
+        System.out.println("Cake HP remaining: " + cakeHP);
+      }
+
+      else if(move.equals("quit")){
+        System.out.println("Quitting.");
+        continueGame = false;
+      }
+
+      if(cakeHP == 0){
+        System.out.println("Cake is dead! You win.");
+        continueGame = false;
+      }
+    }
+
+    scanner.close();
   }
-
-  // public static String whoIsBetter(Boolean selector) {
-  //   System.out.println("Who is better?");
-  //   return selector ? "Playboi Carti" : "Everyone else";
-  // }
 }
