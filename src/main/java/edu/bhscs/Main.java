@@ -25,6 +25,7 @@ public class Main {
 
     // Initialize the baker
     Baker baker = new Baker(10, "Bob", 2);
+    baker.Bake(cake);
 
     // Create a scanner to get user input
     Scanner scanner = new Scanner(System.in);
@@ -32,13 +33,13 @@ public class Main {
     // A variable to tell the while loop when to stop executing the main game loop
     Boolean continueGame = true;
 
-    // Print user input
-    System.out.println();
+    // Print an introduction to the game for the user
     System.out.println(
-        "You are fighting a " + cake.shape + " " + cake.cakeType.toString() + " cake.");
+        "You are fighting a " + cake.getReadableName() + ".");
 
     // Main game loop
     while (continueGame) {
+      // Prompt user
       System.out.print("Choose your move: ");
 
       // Get user input
@@ -47,6 +48,7 @@ public class Main {
       // Choose to either attack or quit based on what the user wants to do
       if (move.equals("a") || move.equals("attack")) {
         System.out.println("Attacking the cake!");
+
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
       }
@@ -61,11 +63,14 @@ public class Main {
 
       // Check if the cake is dead
       if (cake.HP == 0) {
+        // Start end scene
         System.out.println("Cake is dead! You win.");
 
         System.out.println("Here come the customers!");
         // Initialize a customer as it walks in the door. It arrives with a message for the baker.
-        Customer customer = new Customer("Thanks for killing the cake! I'm going to donate a magical number of dollars to the PTSA.");
+        Customer customer =
+            new Customer(
+                "Thanks for killing the cake! I'm going to donate a magical number of dollars to the PTSA.");
 
         System.out.println();
         System.out.print("Here's what the customer has to say: ");

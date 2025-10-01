@@ -11,4 +11,9 @@ public class Cake {
     this.cakeType = cakeType;
     this.HP = HP;
   }
+
+  // return a string describing the cake in english
+  public String getReadableName(){
+    return shape + " " + cakeType.toString().toLowerCase() + " cake";
+  }
 }
