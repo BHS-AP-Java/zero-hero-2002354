@@ -7,6 +7,7 @@ public class Player {
     this.hp = hp;
   }
 
+  // just use scanner.nextLine() this method is kind of useless
   public String AskQuestion(){
     return Main.scanner.nextLine();
   }
