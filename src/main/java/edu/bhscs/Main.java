@@ -19,6 +19,8 @@ package edu.bhscs;
 import java.util.Scanner;
 
 public class Main {
+  public static Scanner scanner;
+
   public static void main(String[] args) {
     // Initialize a cake with one of the CakeTypes enum values
     Cake cake = new Cake("round", CakeTypes.Vanilla, 10);
@@ -27,7 +29,7 @@ public class Main {
     Baker baker = new Baker(10, "Bob", 2);
 
     // Create a scanner to get user input
-    Scanner scanner = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     // A variable to tell the while loop when to stop executing the main game loop
     Boolean continueGame = true;
@@ -49,8 +51,7 @@ public class Main {
         System.out.println("Attacking the cake!");
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
-      }
-      else if (move.equals("quit")) {
+      } else if (move.equals("quit")) {
         System.out.println("Quitting.");
         continueGame = false;
       }
@@ -65,7 +66,9 @@ public class Main {
 
         System.out.println("Here come the customers!");
         // Initialize a customer as it walks in the door. It arrives with a message for the baker.
-        Customer customer = new Customer("Thanks for killing the cake! I'm going to donate a magical number of dollars to the PTSA.");
+        Customer customer =
+            new Customer(
+                "Thanks for killing the cake! I'm going to donate a magical number of dollars to the PTSA.");
 
         System.out.println();
         System.out.print("Here's what the customer has to say: ");
