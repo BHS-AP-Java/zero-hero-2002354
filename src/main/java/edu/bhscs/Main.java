@@ -25,15 +25,17 @@ public class Main {
     Baker baker = new Baker(10, "Bob", 2);
     baker.Bake(cake);
 
+    System.out.println("The cake is evil!");
+
     // Create a input class to get user input
-    Input input = new Input();
+    Input.Initialize();
 
     // A variable to tell the while loop when to stop executing the main game loop
     Boolean continueGame = true;
 
     // Print an introduction to the game for the user
     System.out.println("You are fighting a " + cake.getReadableName() + ".");
-
+    System.out.println("'a'/'slash' for Slash, 's'/'shoot' for Shoot, 'quit' for Quit.");
     // Main game loop
     while (continueGame) {
       // Prompt user
@@ -43,8 +45,14 @@ public class Main {
       String move = Input.GetInput();
 
       // Choose to either attack or quit based on what the user wants to do
-      if (move.equals("a") || move.equals("attack")) {
-        System.out.println("Attacking the cake!");
+      if (move.equals("a") || move.equals("slash")) {
+        System.out.println("Swinging at the cake!");
+
+        cake.HP -= baker.attackStrength;
+        System.out.println("Cake HP remaining: " + cake.HP);
+      }
+      else if (move.equals("s") || move.equals("shoot")) {
+        System.out.println("Shooting at the cake!");
 
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
