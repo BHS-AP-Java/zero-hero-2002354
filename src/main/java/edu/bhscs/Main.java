@@ -5,7 +5,7 @@
 
 /*.
  * DESCRIPTION: A bake sale, with a baker, cake, customer, and PTSA.
- * The user plays as the baker and kills the diabolical cake.
+ * The user plays as the baker and kills the evil cake.
  * Then, the customers come in because they are no longer scared of the cake and donate
  * money to the PTSA. Mr. Reiber is the head of the PTSA and gets the money.
  *
