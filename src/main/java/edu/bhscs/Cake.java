@@ -13,7 +13,7 @@ public class Cake {
   }
 
   // return a string describing the cake in english
-  public String getReadableName(){
+  public String getReadableName() {
     return shape + " " + cakeType.toString().toLowerCase() + " cake";
   }
 }

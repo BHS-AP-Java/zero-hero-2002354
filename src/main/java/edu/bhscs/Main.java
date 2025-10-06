@@ -34,8 +34,7 @@ public class Main {
     Boolean continueGame = true;
 
     // Print an introduction to the game for the user
-    System.out.println(
-        "You are fighting a " + cake.getReadableName() + ".");
+    System.out.println("You are fighting a " + cake.getReadableName() + ".");
 
     // Main game loop
     while (continueGame) {
@@ -51,8 +50,7 @@ public class Main {
 
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
-      }
-      else if (move.equals("quit")) {
+      } else if (move.equals("quit")) {
         System.out.println("Quitting.");
         continueGame = false;
       }

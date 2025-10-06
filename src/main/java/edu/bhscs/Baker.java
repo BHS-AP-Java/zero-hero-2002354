@@ -13,7 +13,7 @@ public class Baker {
   }
 
   // print that the baker baked a cake
-  public void Bake(Cake cake){
+  public void Bake(Cake cake) {
     System.out.println("I, " + name + " baked a " + cake.getReadableName() + "!");
   }
 }
