@@ -2,5 +2,9 @@ package edu.bhscs;
 
 public enum CakeTypes {
   Chocolate,
-  Vanilla
+  Vanilla,
+  Strawberry,
+  IceCream,
+  Mango,
+  Pineapple
 }
