@@ -16,8 +16,6 @@
 
 package edu.bhscs;
 
-import java.util.Scanner;
-
 public class Main {
   public static void main(String[] args) {
     // Initialize a cake with one of the CakeTypes enum values
@@ -27,8 +25,8 @@ public class Main {
     Baker baker = new Baker(10, "Bob", 2);
     baker.Bake(cake);
 
-    // Create a scanner to get user input
-    Scanner scanner = new Scanner(System.in);
+    // Create a input class to get user input
+    Input input = new Input();
 
     // A variable to tell the while loop when to stop executing the main game loop
     Boolean continueGame = true;
@@ -42,7 +40,7 @@ public class Main {
       System.out.print("Choose your move: ");
 
       // Get user input
-      String move = scanner.nextLine();
+      String move = Input.GetInput();
 
       // Choose to either attack or quit based on what the user wants to do
       if (move.equals("a") || move.equals("attack")) {
@@ -75,7 +73,7 @@ public class Main {
         customer.PrintMessage();
 
         System.out.print("Choose how much money to donate: ");
-        String money = scanner.nextLine();
+        String money = Input.GetInput();
 
         // Initialize a PTSA with the amount of money donated
         PTSA ptsa = new PTSA(Integer.parseInt(money), "Mr. Reiber");
@@ -86,6 +84,6 @@ public class Main {
       }
     }
 
-    scanner.close();
+    Input.scanner.close();
   }
 }
