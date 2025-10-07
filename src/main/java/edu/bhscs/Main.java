@@ -19,10 +19,10 @@ package edu.bhscs;
 public class Main {
   public static void main(String[] args) {
     // Initialize a cake with one of the CakeTypes enum values
-    Cake cake = new Cake("round", CakeTypes.Vanilla, 10);
+    MyCake cake = new MyCake("round", CakeTypes.Vanilla, 10);
 
     // Initialize the baker
-    Baker baker = new Baker(10, "Bob", 2);
+    MyBaker baker = new MyBaker(10, "Bob", 2);
     baker.Bake(cake);
 
     System.out.println("The cake is evil!");
@@ -51,14 +51,12 @@ public class Main {
 
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
-      }
-      else if (move.equals("s") || move.equals("shoot")) {
+      } else if (move.equals("s") || move.equals("shoot")) {
         System.out.println("Shooting at the cake!");
 
         cake.HP -= baker.attackStrength;
         System.out.println("Cake HP remaining: " + cake.HP);
-      }
-      else if (move.equals("quit")) {
+      } else if (move.equals("quit")) {
         System.out.println("Quitting.");
         continueGame = false;
       }
@@ -74,8 +72,8 @@ public class Main {
 
         System.out.println("Here come the customers!");
         // Initialize a customer as it walks in the door. It arrives with a message for the baker.
-        Customer customer =
-            new Customer(
+        MyCustomer customer =
+            new MyCustomer(
                 "Thanks for killing the cake! I'm going to donate a magical number of dollars to the PTSA.");
 
         System.out.println();
@@ -94,6 +92,16 @@ public class Main {
       }
     }
 
-    Input.scanner.close();
+    // Here is Mr. Reiber's baker class
+    Player reiberPlayer = new Player();
+    Baker reiberBaker = new Baker(reiberPlayer, "Benjamin");
+    Customer reiberCustomer = new Customer("Chris");
+    Store reiberStore = new Store("My House");
+
+    reiberBaker.takeJob(reiberStore);
+    reiberBaker.takeOrder(10, reiberCustomer);
+
+    // Close our scanner
+    Input.CloseScanner();
   }
 }

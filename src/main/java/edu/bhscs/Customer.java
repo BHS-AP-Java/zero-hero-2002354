@@ -1,15 +1,19 @@
 package edu.bhscs;
 
+// Reiber Baker Wrapper
 public class Customer {
-  String customerMessage;
+  public String name;
 
-  // PTSA Constructor
-  public Customer(String customerMessage) {
-    this.customerMessage = customerMessage;
+  public Customer(String name) {
+    this.name = name;
   }
 
-  // Method to print the customers message
-  public void PrintMessage() {
-    System.out.println(customerMessage);
+  public int pay(int money) {
+    System.out.println("I, " + name + " am paying " + money + "!");
+    return money;
+  }
+
+  public void takeCake(Cake cake) {
+    System.out.println("I got a " + cake.type + " cake!");
   }
 }

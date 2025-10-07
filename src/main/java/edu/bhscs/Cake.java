@@ -1,19 +1,12 @@
 package edu.bhscs;
 
+// Reiber Baker Wrapper
 public class Cake {
-  public String shape;
-  public CakeTypes cakeType;
-  public int HP;
+  Flour flour;
+  String type;
 
-  // Cake Constructor
-  public Cake(String shape, CakeTypes cakeType, int HP) {
-    this.shape = shape;
-    this.cakeType = cakeType;
-    this.HP = HP;
-  }
-
-  // return a string describing the cake in english
-  public String getReadableName() {
-    return shape + " " + cakeType.toString().toLowerCase() + " cake";
+  public Cake(String type, Flour flour){
+    this.type = type;
+    this.flour = flour;
   }
 }
