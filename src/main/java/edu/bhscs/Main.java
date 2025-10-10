@@ -1,9 +1,9 @@
 // Balakesav Gurugubelli
 // P2
-// Zero Hero
+// Bake Sale
 // 9/19
 
-/*.
+/*
  * DESCRIPTION: A bake sale, with a baker, cake, customer, and PTSA.
  * The user plays as the baker and kills the evil cake.
  * Then, the customers come in because they are no longer scared of the cake and donate

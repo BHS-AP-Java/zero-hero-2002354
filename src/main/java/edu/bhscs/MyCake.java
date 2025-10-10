@@ -1,3 +1,15 @@
+// Balakesav Gurugubelli
+// P2
+// Bake Sale
+// 9/19
+
+/*
+ * DESCRIPTION: A cake used in the main scenario
+ *
+ * INPUT: Shape, Cake Type, Health
+ * OUTPUT: Can output a readable string that involves the cakes type and shape.
+ * Edge Case: N/A
+ */
 package edu.bhscs;
 
 public class MyCake {

@@ -1,3 +1,16 @@
+// Balakesav Gurugubelli
+// P2
+// Bake Sale
+// 9/26
+
+/*
+ * DESCRIPTION: Mr. Reiber's baker class
+ *
+ * INPUT: Questions about the cake and where the baker lives
+ * OUTPUT: Print where the baker works
+ * EDGE CASE: User types something other than yes or no
+ */
+
 package edu.bhscs;
 
 // :(

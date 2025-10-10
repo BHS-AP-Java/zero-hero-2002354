@@ -1,3 +1,15 @@
+// Balakesav Gurugubelli
+// P2
+// Bake Sale
+// 9/19
+
+/*
+ * DESCRIPTION: A customer class for Mr. Reiber's baker.
+ *
+ * INPUT: Name, Type of Cake, Amount of money paid
+ * OUTPUT: What cake the customer got and how much it paid
+ * Edge Case: N/A
+ */
 package edu.bhscs;
 
 // Reiber Baker Wrapper
