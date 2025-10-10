@@ -9,5 +9,10 @@ public class MyClass {
 
   void Capture(){
     System.out.println("Captured");
+    System.out.println("         ");
+    System.out.println("  #####  ");
+    System.out.println("#########");
+    System.out.println("  #####  ");
+    System.out.println("         ");
   }
 }
