@@ -13,7 +13,7 @@ public class Input {
     return scanner.nextLine();
   }
 
-  public static void CloseScanner(){
+  public static void CloseScanner() {
     scanner.close();
   }
 }

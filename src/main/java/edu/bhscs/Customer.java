@@ -14,6 +14,6 @@ public class Customer {
   }
 
   public void takeCake(Cake cake) {
-    System.out.println("I got a " + cake.type + " cake!");
+    System.out.println("I got a " + cake.type + " cake! It would rate it " + cake.quality + "/10.");
   }
 }
