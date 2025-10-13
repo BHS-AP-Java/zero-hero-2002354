@@ -22,10 +22,19 @@ public class Burger {
 
   void Capture() {
     System.out.println("Captured");
-    System.out.println("         ");
-    System.out.println("  #####  ");
-    System.out.println("#########");
-    System.out.println("  #####  ");
-    System.out.println("         ");
+    System.out.println(duplicateCharacters(" ", 9));
+    System.out.println("  " + duplicateCharacters("#", 5) + "  ");
+    System.out.println(duplicateCharacters("#", 9));
+    System.out.println("  " + duplicateCharacters("#", 5) + "  ");
+    System.out.println(duplicateCharacters(" ", 9));
+  }
+
+  String duplicateCharacters(String character, int count){
+    String output = "";
+    for(int i = 0; i < count; i++){
+      output += character;
+    }
+
+    return output;
   }
 }

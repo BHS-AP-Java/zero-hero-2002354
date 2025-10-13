@@ -11,7 +11,7 @@
  * Edge Case: N/A
  */
 
- package edu.bhscs;
+package edu.bhscs;
 
 // Reiber Baker Wrapper
 public class Store {
