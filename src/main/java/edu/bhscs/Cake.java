@@ -7,7 +7,7 @@
  * DESCRIPTION: A cake for Mr. Reiber's baker class to work
  *
  * INPUT: The type of cake, the flour class, and an integer quality
- * OUTPUT: No Output
+ * OUTPUT: Prints a cake pattern
  * EDGE CASE: No Edge Case
  */
 
