@@ -18,6 +18,8 @@ package edu.bhscs;
 
 public class Main {
   public static void main(String[] args) {
+    Cake testcake = new Cake("chocolate", new Flour(10), 10);
+
     // Initialize a cake with one of the CakeTypes enum values
     MyCake cake = new MyCake("round", CakeTypes.Vanilla, 10);
 

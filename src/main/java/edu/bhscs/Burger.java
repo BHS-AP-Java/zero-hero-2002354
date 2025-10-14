@@ -20,8 +20,7 @@ public class Burger {
     this.name = name;
   }
 
-  void Capture() {
-    System.out.println("Captured");
+  void Draw() {
     System.out.println(duplicateCharacters(" ", 9));
     System.out.println("  " + duplicateCharacters("#", 5) + "  ");
     System.out.println(duplicateCharacters("#", 9));
@@ -29,9 +28,10 @@ public class Burger {
     System.out.println(duplicateCharacters(" ", 9));
   }
 
-  String duplicateCharacters(String character, int count){
+  String duplicateCharacters(String character, int count) {
     String output = "";
-    for(int i = 0; i < count; i++){
+
+    for (int i = 0; i < count; i++) {
       output += character;
     }
 
