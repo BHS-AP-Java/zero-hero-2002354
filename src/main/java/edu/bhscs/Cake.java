@@ -19,12 +19,14 @@ public class Cake {
   String type;
   int quality;
   int size;
+  String color;
 
-  public Cake(String type, Flour flour, int quality, int size) {
+  public Cake(String type, Flour flour, int quality, int size, String color) {
     this.type = type;
     this.flour = flour;
     this.quality = quality;
     this.size = size;
+    this.color = color;
 
     draw();
   }
@@ -44,13 +46,13 @@ public class Cake {
       viewArray[y][x] = "#";
     }
 
-    // drawing
-    for (int angle = 0; angle < 360; angle += 60) {
-      for (float i = 0; i < size / 2; i += 0.1) {
-        int x = (int) Math.round(Math.cos(angle) * i) + size;
-        int y = (int) Math.round(Math.sin(angle) * i) + size;
+    // slices
+    for (int angle = 0; angle < 360; angle += 30) {
+      for (float i = 0; i < size; i += 0.1) {
+        int x =  ((int) Math.round(Math.cos(angle) * i)) + size;
+        int y =  ((int) Math.round(Math.sin(angle) * i)) + size;
 
-        viewArray[y][x] = "#";
+        viewArray[y][x] = this.color;
       }
     }
 
