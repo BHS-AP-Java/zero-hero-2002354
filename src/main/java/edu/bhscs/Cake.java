@@ -20,13 +20,15 @@ public class Cake {
   int quality;
   int size;
   String color;
+  String frosting;
 
-  public Cake(String type, Flour flour, int quality, int size, String color) {
+  public Cake(String type, Flour flour, int quality, int size, String color, String frosting) {
     this.type = type;
     this.flour = flour;
     this.quality = quality;
     this.size = size;
     this.color = color;
+    this.frosting = frosting;
 
     draw();
   }
@@ -43,7 +45,7 @@ public class Cake {
       int x = (int) Math.round(Math.cos(angle) * size) + size;
       int y = (int) Math.round(Math.sin(angle) * size) + size;
 
-      viewArray[y][x] = "#";
+      viewArray[y][x] = this.color;
     }
 
     // slices
