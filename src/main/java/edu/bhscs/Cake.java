@@ -18,16 +18,18 @@ public class Cake {
   Flour flour;
   String type;
   int quality;
+  int size;
 
-  public Cake(String type, Flour flour, int quality) {
+  public Cake(String type, Flour flour, int quality, int size) {
     this.type = type;
     this.flour = flour;
     this.quality = quality;
+    this.size = size;
 
-    draw(8);
+    draw();
   }
 
-  public void draw(int size) {
+  public void draw() {
     // size must be even
     int arraySize = size * 2 + 1;
 
@@ -44,7 +46,7 @@ public class Cake {
 
     // drawing
     for (int angle = 0; angle < 360; angle += 60) {
-      for (int i = 0; i < size / 2; i++) {
+      for (float i = 0; i < size / 2; i += 0.1) {
         int x = (int) Math.round(Math.cos(angle) * i) + size;
         int y = (int) Math.round(Math.sin(angle) * i) + size;
 
